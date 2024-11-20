@@ -1,0 +1,26 @@
+﻿@using LAB_4.Models;
+@model LAB_4.ViewModels.ProductViewModel
+@{
+    ViewData["Title"] = "Продукты";
+}
+<table border="1" cellspacing="100">
+    <caption>Продукты</caption>
+    <tr>
+        <th>Id Product</th>
+        <th>Название</th>
+        <th>Характеристики</th>
+        <th>Единица измерения</th>
+        <th>Фото</th>
+    </tr>
+    @foreach (var product in Model.Products)
+    {
+        <tr>
+            <td>@product.ProductId</td>
+            <td>@product.Name</td>
+            <td>@product.Characteristics</td>
+            <td>@product.Unit</td>
+            <td>Фото удалено</td>
+            @* <td>@product.Photo</td> *@
+        </tr>
+    }
+</table>

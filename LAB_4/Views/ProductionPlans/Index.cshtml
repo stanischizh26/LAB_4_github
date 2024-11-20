@@ -1,0 +1,29 @@
+﻿@using LAB_4.Models;
+@model LAB_4.ViewModels.ProductionPlanViewModel
+@{
+    ViewData["Title"] = "План выпуска";
+}
+<table border="1" cellspacing="100">
+    <caption>План выпуска</caption>
+    <tr>
+        <th>Id ProductionPlan</th>
+        <th>Name Enterprise</th>
+        <th>Name Product</th>
+        <th>Планируемый объем</th>
+        <th>фактический объем</th>
+        <th>Квартал</th>
+        <th>Год</th>
+    </tr>
+    @foreach (var productionPlan in Model.ProductionPlans)
+    {
+        <tr>
+            <td>@productionPlan.ProductionPlanId</td>
+            <td>@productionPlan.Enterprise.Name</td>
+            <td>@productionPlan.Product.Name</td>
+            <td>@productionPlan.PlannedVolume</td>
+            <td>@productionPlan.ActualVolume</td>
+            <td>@productionPlan.Quarter</td>
+            <td>@productionPlan.Year</td>
+        </tr>
+    }
+</table>

@@ -1,0 +1,25 @@
+﻿@using LAB_4.Models;
+@model LAB_4.ViewModels.EnterpriseViewModel
+@{
+    ViewData["Title"] = "Предприятие";
+}
+<table border="1" cellspacing="100">
+    <caption>Предприятие</caption>
+    <tr>
+        <th>Id Enterprise</th>
+        <th>Название</th>
+        <th>ФИО руководителя</th>
+        <th>Вид деятельности</th>
+        <th>Форма собственности</th>
+    </tr>
+    @foreach (var enterprise in Model.Enterprises)
+    {
+        <tr>
+            <td>@enterprise.EnterpriseId</td>
+            <td>@enterprise.Name</td>
+            <td>@enterprise.DirectorName</td>
+            <td>@enterprise.ActivityType</td>
+            <td>@enterprise.OwnershipForm</td>
+        </tr>
+    }
+</table>

@@ -1,0 +1,79 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+/*Стили для таблиц*/
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+}
+
+    table caption {
+        caption-side: top; /* Гарантирует, что заголовок сверху */
+        font-size: 28px; /* Увеличенный размер текста */
+        font-weight: bold;
+        margin-bottom: 15px; /* Отступ между заголовком и таблицей */
+        color: #333; /* Темный текст */
+        text-transform: uppercase; /* Заглавные буквы */
+        letter-spacing: 1px; /* Межбуквенное расстояние */
+        text-align: center;
+    }
+
+    table th, table td {
+        border: 1px solid #ddd;
+        padding: 12px 15px;
+    }
+
+    table th {
+        background-color: #f4f4f4;
+        color: #333;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    table tr:nth-child(odd) {
+        background-color: #ffcccc; /* Светло-красный */
+    }
+
+    table tr:nth-child(even) {
+        background-color: #cce5ff; /* Светло-синий */
+    }
+
+    table tr:hover {
+        background-color: #ffe680; /* Светло-жёлтый при наведении */
+        transition: background-color 0.3s;
+    }
+
+    table tr td {
+        text-align: center;
+    }
+
+    table tr:hover td {
+        font-weight: bold;
+        color: #333;
+    }
+
+
